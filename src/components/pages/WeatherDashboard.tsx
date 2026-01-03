@@ -9,9 +9,10 @@ import {
   useWeatherQuery,
 } from "@/hooks/useWeather";
 import CurrentWeather from "../ui/CurrentWeather";
-import HourlyTemperature from "../ui/hourlyTemperature";
+import HourlyTemperature from "../ui/HourlyTemperature";
 import WeatherDetails from "../ui/WeatherDetails";
 import WeatherForecast from "../ui/WeatherForecast";
+import FavoriteCities from "../ui/FavoriteCities";
 const WeatherDashboard = () => {
   const {
     coordinates,
@@ -98,8 +99,8 @@ const WeatherDashboard = () => {
 
   return (
     <div className="space-y-4">
+      <FavoriteCities />
       <div className="flex items-center justify-between">
-        {/* Favorite City  */}
         <h1 className="text-xl font-bold tracking-tight">My Location</h1>
         <Button
           variant={"outline"}
@@ -114,7 +115,6 @@ const WeatherDashboard = () => {
           />
         </Button>
       </div>
-
       <div>
         <div className="flex flex-col lg:flex-row gap-4">
           {/* current weather and hourly temp data */}
