@@ -16,12 +16,12 @@ const Header = () => {
           />
         </Link>
 
-        <div>
+        <div className="flex items-center">
           {/* search */}
           {/* theme toggles */}
           <div
             onClick={() => setTheme(isDark ? "light" : "dark")}
-            className={`flex item-center cursor-pointer tansition-transform duration-500 ${
+            className={`flex items-center justify-center cursor-pointer tansition-transform duration-500 ${
               isDark ? "rotate-180" : "rotate-0"
             }`}
           >
